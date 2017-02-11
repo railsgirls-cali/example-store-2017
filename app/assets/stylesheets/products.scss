@@ -1,3 +1,31 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-cont {
+  text-align: center;
+  h3 a {
+    color: #d3360b;
+    margin-bottom: 12px;
+  }
+  a:hover {
+    background: none;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+.product-details {
+  h1 {
+    color: #d3360b;
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .description {
+    margin-top: 100px;
+  }
+}
