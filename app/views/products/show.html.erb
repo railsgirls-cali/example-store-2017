@@ -12,3 +12,17 @@
 </p>
 
 <p>
+  <strong>Cantidades disponibles:</strong>
+  <%= @product.quantity %>
+</p>
+
+<h3>
+  <% if @product.quantity > 0 %>
+    <%= link_to 'Comprar', purchase_product_path(@product), style: "color:blue" %>
+  <% else %>
+    <%= link_to 'Lo lamentamos, se han acabado las unidades disponibles', '#', style: "color:blue" %>
+  <% end %>
+</h3>
+
+<%= link_to 'Regresar a productos', products_path %>
+<%= link_to 'Eliminar producto', product_path(@product), method: :delete %>
