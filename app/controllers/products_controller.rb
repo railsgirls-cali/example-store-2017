@@ -70,6 +70,11 @@ class ProductsController < ApplicationController
       format.html { redirect_to @product, notice: 'Producto comprado' }
     end
   end
+  
+  def search
+    @product_name = params[:product_name]
+    @products = Product.search(@product_name)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

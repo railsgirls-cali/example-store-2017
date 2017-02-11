@@ -11,5 +11,13 @@
       <%= link_to 'Tienda Rails Girls Cali', root_path, class: "navbar-brand" %>
     </div>
     
+    <%= form_tag search_products_path, class: 'navbar-form navbar-left pull-right',
+                   role: 'search', method: :get do %>
+        <div class="form-group">
+          <%= text_field_tag :product_name, @product_name, class: 'form-control',
+                             placeholder: 'Buscar productos' %>
+        </div>
+        <%= submit_tag 'Buscar', class: 'btn btn-default' %>
+      <% end %>
   </div>
 </nav>
