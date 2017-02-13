@@ -11,6 +11,14 @@
       <%= link_to 'Tienda Rails Girls Cali', root_path, class: "navbar-brand" %>
     </div>
     
+    <% if admin_signed_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to "Cerrar Sesión", destroy_admin_session_path, method: :delete %>
+          </li>
+        </ul>
+      <% end %>
+    
     <%= form_tag search_products_path, class: 'navbar-form navbar-left pull-right',
                    role: 'search', method: :get do %>
         <div class="form-group">
@@ -19,5 +27,7 @@
         </div>
         <%= submit_tag 'Buscar', class: 'btn btn-default' %>
       <% end %>
+      
+      
   </div>
 </nav>
