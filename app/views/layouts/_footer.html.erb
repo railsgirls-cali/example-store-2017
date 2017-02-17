@@ -1,0 +1,8 @@
+<footer>
+  <% unless admin_signed_in? %>
+    <div class="pull-right">
+      <%= link_to "I'm an admin", new_admin_session_path, style: 'color:white' %>
+    </div>
+  <% end %>
+  Rails Girls Cali ♥
+</footer>
